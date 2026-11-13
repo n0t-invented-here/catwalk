@@ -1,6 +1,10 @@
-# catwalk
+<img src="images/kenney-featuring-yellow-64.png" align="right">
 
-A cat walking along the bottom of your browser.
+# Cat walk 🐈
+
+**A cat walking along the bottom of your browser.**
+
+![Web Characters screenshot](images/WebCharactersScreenshot.jpg)
 
 `@n1h/web-characters` puts an animated glTF character on any web page: a see-through canvas that drops a model in at a point, lands it on the bottom edge of the page (or on another character's head), and lets it live there: idle, walk, run, do whatever its clips do, turn around at the sides, bump into the others, be picked up and thrown.
 Clicks beside a character reach the page as if the canvas were not there.
@@ -8,11 +12,11 @@ Clicks beside a character reach the page as if the canvas were not there.
 
 The models come as packs, one npm package each, one module per model, so a build ships only the models a page imports:
 
-| Package | Holds |
-|---|---|
-| [`@n1h/web-characters`](packages/web-characters/README.md) | the core: the scene, the life, the ground the characters share, the pointer, `createCharacter`, `<Character>`, the `ModelSpec` type for your own models |
-| [`@n1h/web-characters-cube-pets`](packages/web-characters-cube-pets/README.md) | Kenney's 24 Cube Pets, CC0: `cat`, `dog`, `fox`, … |
-| [`@n1h/web-characters-block-characters`](packages/web-characters-block-characters/README.md) | Kenney's block-style people, CC0: four Blocky Characters and six Mini Characters |
+| Package                                                                                      | Holds                                                                                                                                                   |
+| -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`@n1h/web-characters`](packages/web-characters/README.md)                                   | the core: the scene, the life, the ground the characters share, the pointer, `createCharacter`, `<Character>`, the `ModelSpec` type for your own models |
+| [`@n1h/web-characters-cube-pets`](packages/web-characters-cube-pets/README.md)               | Kenney's 24 Cube Pets, CC0: `cat`, `dog`, `fox`, …                                                                                                      |
+| [`@n1h/web-characters-block-characters`](packages/web-characters-block-characters/README.md) | Kenney's block-style people, CC0: four Blocky Characters and six Mini Characters                                                                        |
 
 ## Install
 
@@ -60,13 +64,13 @@ Drop several and they land on each other's heads, ride along, walk off, and keep
 
 Bun, `just` and `pwsh` (the recipe shell on every OS).
 
-| Recipe | Does |
-|---|---|
-| `just demo` | the demo page, built and served |
-| `just check` | `tsc --noEmit` over every package and the demo, then `bun test` (the core's life, framing, spec and settings tests; the packs' spec tests; a test that bundles a page importing one animal and counts the files it ships) |
-| `just web-characters pack`, `just cube-pets pack`, `just block-characters pack` | what each tarball would hold |
-| `just web-characters publish`, `just cube-pets publish`, `just block-characters publish` | `bun publish --access public` for that package, skipped when its version is already on the registry |
-| `just publish-all` | `check`, then every package whose version is new |
+| Recipe                                                                                   | Does                                                                                                                                                                                                                      |
+| ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `just demo`                                                                              | the demo page, built and served                                                                                                                                                                                           |
+| `just check`                                                                             | `tsc --noEmit` over every package and the demo, then `bun test` (the core's life, framing, spec and settings tests; the packs' spec tests; a test that bundles a page importing one animal and counts the files it ships) |
+| `just web-characters pack`, `just cube-pets pack`, `just block-characters pack`          | what each tarball would hold                                                                                                                                                                                              |
+| `just web-characters publish`, `just cube-pets publish`, `just block-characters publish` | `bun publish --access public` for that package, skipped when its version is already on the registry                                                                                                                       |
+| `just publish-all`                                                                       | `check`, then every package whose version is new                                                                                                                                                                          |
 
 A release: bump the version in the package(s) that changed (a pack that depends on a new core also bumps its peer range), commit, `just publish-all`.
 
