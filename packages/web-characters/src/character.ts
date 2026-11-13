@@ -6,7 +6,7 @@
 
 import { groundFor } from "./ground";
 import { BODY, FEET, HEAD, createLife, type Box } from "./life";
-import type { ModelSpec } from "./model";
+import type { Direction, ModelSpec } from "./model";
 import { createModelScene } from "./scene";
 import { DEFAULT_CHARACTER_SETTINGS, sanitizeCharacterSettings, type CharacterSettings } from "./settings";
 
@@ -46,6 +46,10 @@ export type CharacterHandle = {
   /** The box's top-left in bounds coordinates, and its edge. */
   readonly position: Point;
   readonly size: number;
+  /** Which way the character faces: 1 is right, -1 is left. */
+  readonly facing: Direction;
+  /** Turn to face this way; a walk picks its own way again. */
+  face(dir: Direction): void;
   /** Switch model; resolves when the new one is up (or failed and reported). */
   setModel(model: ModelSpec): Promise<void>;
   /** Change the scale or the bottom; the reply is the clamped result. */
@@ -209,6 +213,12 @@ export function createCharacter(options: CharacterOptions): CharacterHandle {
     },
     get size() {
       return size;
+    },
+    get facing() {
+      return life.facing;
+    },
+    face(dir) {
+      life.face(dir);
     },
     setModel: show,
     setSettings(patch) {

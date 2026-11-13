@@ -1,6 +1,6 @@
 {
   "name": "@n1h/web-characters",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "description": "Animated glTF characters for any web page: a see-through canvas that drops a model in at a point, lands it on the bottom edge or on another character's head and lets it live there, idle, walk, run, bump, be picked up and thrown. Babylon.js underneath; a framework-free createCharacter() and a React <Character>. Models come from packs (@n1h/web-characters-cube-pets, @n1h/web-characters-block-characters) or your own ModelSpec.",
   "license": "MIT OR 0BSD",

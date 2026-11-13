@@ -25,6 +25,8 @@ Creates the canvas, appends it to the body (or to `host`), starts the character,
 | `position`, `size` | the canvas box's top-left in bounds coordinates, and its edge |
 | `setModel(model)` | switch model; resolves when the new one is up, or failed and was reported |
 | `setSettings({ scale?, bottom? })` | change either; the reply is the clamped result |
+| `facing` | which way it faces: `1` right, `-1` left |
+| `face(dir)` | turn it to face `1` or `-1`; the next walk picks its own way |
 | `spawn({ x, y })` | put the character's centre here and let it fall |
 | `dispose()` | stop, remove the canvas, leave the ground |
 
