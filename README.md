@@ -66,9 +66,10 @@ Your own glTF: describe it as a `ModelSpec` ([the model spec](docs/model-spec.md
 
 ## Documentation
 
+The reference is in [`docs/`](docs/):
+
 | Page | Covers |
 |---|---|
-| [docs/README.md](docs/README.md) | the index |
 | [the core](docs/core.md) | `createCharacter`, the handle, `<Character>`, settings |
 | [the model spec](docs/model-spec.md) | any animated glTF as a character: clips, moods, fitting, textures |
 | [packs](docs/packs.md) | what each pack exports, how to make one, what a build ships |
