@@ -6,6 +6,8 @@
 const PORT = Number(process.env.PORT ?? 4748);
 const HOST = process.env.HOST ?? "127.0.0.1";
 const build = new URL("./build/", import.meta.url);
+// The desktop pet's icon: Kenney's cat preview cropped to the animal (the sweetview desktop-pet demo makes its icons the same way).
+const favicon = Bun.file(new URL("./favicon.png", import.meta.url));
 
 const page = `<!doctype html>
 <html lang="en">
@@ -13,6 +15,7 @@ const page = `<!doctype html>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>catwalk</title>
+<link rel="icon" type="image/png" href="/favicon.png" />
 <link rel="stylesheet" href="/main.css" />
 </head>
 <body>
@@ -35,6 +38,7 @@ const server = Bun.serve({
   async fetch(req) {
     const { pathname } = new URL(req.url);
     if (pathname === "/") return new Response(page, { headers: { "content-type": "text/html; charset=utf-8" } });
+    if (pathname === "/favicon.png") return new Response(favicon);
     const file = await fileUnder(build, pathname.slice(1));
     return file ? new Response(file) : new Response("not found", { status: 404 });
   },
