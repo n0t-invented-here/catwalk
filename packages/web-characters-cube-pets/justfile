@@ -1,0 +1,25 @@
+# @n1h/web-characters-cube-pets, Kenney's Cube Pets as models.
+
+set shell := ["pwsh", "-NoProfile", "-Command", "$ErrorActionPreference = 'Stop'; $PSNativeCommandUseErrorActionPreference = $true; trap { if ($_.Exception -is [System.Management.Automation.NativeCommandExitException]) { exit $_.Exception.ExitCode }; break };"]
+
+@_default:
+    just --justfile "{{module_file()}}" --list
+
+
+install:
+    bun install --cwd ../..
+
+test: install
+    bun test .
+
+# What the tarball would hold
+pack: install
+    bun pm pack --dry-run
+
+# Skipped when this version is already on the registry
+publish: install
+    bun ../../scripts/publish-if-new.ts .
+
+# The same, without publishing
+publish-dry-run: install
+    bun ../../scripts/publish-if-new.ts . --dry-run

@@ -1,0 +1,20 @@
+{
+  "name": "catwalk",
+  "private": true,
+  "type": "module",
+  "description": "A cat walking along the bottom of your browser: the @n1h/web-characters packages, one repo.",
+  "license": "MIT OR 0BSD",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "bun test"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/react": "^19.1.0",
+    "react": "^19.1.0",
+    "typescript": "^5.9.0"
+  }
+}

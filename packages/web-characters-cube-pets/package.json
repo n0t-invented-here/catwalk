@@ -1,0 +1,35 @@
+{
+  "name": "@n1h/web-characters-cube-pets",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Kenney's 24 Cube Pets (CC0) as @n1h/web-characters models: one module per animal, so a build ships only the animals a page imports. The models, the shared texture and the licence are in the package.",
+  "license": "MIT OR 0BSD",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n0t-invented-here/catwalk.git",
+    "directory": "packages/web-characters-cube-pets"
+  },
+  "homepage": "https://github.com/n0t-invented-here/catwalk#readme",
+  "bugs": {
+    "url": "https://github.com/n0t-invented-here/catwalk/issues"
+  },
+  "files": [
+    "src",
+    "!src/**/*.test.ts",
+    "assets",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts",
+    "./spec": "./src/spec.ts",
+    "./*": "./src/*.ts",
+    "./assets/*": "./assets/*"
+  },
+  "peerDependencies": {
+    "@n1h/web-characters": "^0.1.0"
+  },
+  "devDependencies": {
+    "@n1h/web-characters": "workspace:*"
+  }
+}

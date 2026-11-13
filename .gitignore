@@ -1,0 +1,5 @@
+node_modules/
+dist/
+build/
+.*.bun-build
+.DS_Store
