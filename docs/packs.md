@@ -4,6 +4,8 @@ A pack is an npm package of `ModelSpec`s with their files: specs, glTFs, texture
 
 ## The packs here
 
+The models are [Kenney](https://kenney.nl)'s, [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/): [Cube Pets](https://kenney.nl/assets/cube-pets), [Blocky Characters](https://kenney.nl/assets/blocky-characters), [Mini Characters](https://kenney.nl/assets/mini-characters).
+
 | Package | One model | The whole pack (ships every file) | Data only |
 |---|---|---|---|
 | `@n1h/web-characters-cube-pets`, Kenney's Cube Pets: 24 glTF of 130 to 170 KB and one shared texture | `@n1h/web-characters-cube-pets/<name>` exports `<name>`; the names are `PETS` (`cat`, `dog`, `polar`, …) | the package root exports all 24 and `CUBE_PETS` by name | `/spec`: `PETS`, `Pet`, `petLabel`, `BIRDS`, `petModelFile`, `cubePetMoods`, `cubePetSpec` |

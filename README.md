@@ -20,8 +20,8 @@ A cat walking along the bottom of your browser.
 | Package | Holds |
 |---|---|
 | [`@n1h/web-characters`](packages/web-characters/README.md) | the core: scene, life, ground, pointer, `createCharacter`, `<Character>`, the `ModelSpec` type |
-| [`@n1h/web-characters-cube-pets`](packages/web-characters-cube-pets/README.md) | Kenney's 24 Cube Pets (CC0) |
-| [`@n1h/web-characters-block-characters`](packages/web-characters-block-characters/README.md) | Kenney's 4 Blocky Characters and 6 Mini Characters (CC0) |
+| [`@n1h/web-characters-cube-pets`](packages/web-characters-cube-pets/README.md) | Kenney's 24 [Cube Pets](https://kenney.nl/assets/cube-pets), [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) |
+| [`@n1h/web-characters-block-characters`](packages/web-characters-block-characters/README.md) | Kenney's 4 [Blocky Characters](https://kenney.nl/assets/blocky-characters) and 6 [Mini Characters](https://kenney.nl/assets/mini-characters), [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) |
 
 Every model is its own module, so a build ships only the models a page imports.
 
@@ -96,4 +96,14 @@ A release: bump the version in the packages that changed, commit, `just publish-
 
 ## License
 
-MIT or 0BSD, your choice: `LICENSE`, `LICENSE-0BSD`. The models are Kenney's, CC0; each pack's `assets/` folder has the licence.
+The code: MIT or 0BSD, your choice (`LICENSE`, `LICENSE-0BSD`).
+
+The models are by [Kenney](https://kenney.nl), released under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/):
+
+| Pack | Source |
+|---|---|
+| Cube Pets | https://kenney.nl/assets/cube-pets |
+| Blocky Characters | https://kenney.nl/assets/blocky-characters |
+| Mini Characters | https://kenney.nl/assets/mini-characters |
+
+Each pack's `assets/` folder carries Kenney's licence file.
