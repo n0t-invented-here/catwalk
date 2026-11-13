@@ -1,0 +1,16 @@
+{
+  "name": "catwalk-demo",
+  "private": true,
+  "type": "module",
+  "description": "The demo page: a click drops a character at that point; a panel picks the model from the packs and sets the scale and the bottom of every character.",
+  "dependencies": {
+    "@n1h/web-characters": "workspace:*",
+    "@n1h/web-characters-block-characters": "workspace:*",
+    "@n1h/web-characters-cube-pets": "workspace:*",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@types/react-dom": "^19.1.0"
+  }
+}

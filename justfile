@@ -21,5 +21,10 @@ test: install
 
 check: typecheck test
 
+# The demo page: bundles it, then serves it on http://127.0.0.1:4748 (PORT and HOST to change)
+demo: install
+    bun build demo/main.tsx --outdir demo/build --minify
+    bun run demo/serve.ts
+
 # Each package whose version is not on the registry yet
 publish-all: check web-characters::publish cube-pets::publish block-characters::publish

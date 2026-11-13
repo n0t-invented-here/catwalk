@@ -54,7 +54,7 @@ Drop several and they land on each other's heads, ride along, walk off, and keep
 
 ## Demo
 
-The demo page lives in the sweetview repo for now: [`demos/web-characters`](https://github.com/n0t-invented-here/sweetview/tree/web-pets/demos/web-characters), `just demos web-characters demo` there. A click anywhere drops a character at that point.
+`just demo` bundles the page in `demo/` and serves it on `http://127.0.0.1:4748`. A click anywhere drops a character at that point; the panel picks the model from the packs and sets the scale and the bottom of every character. Pick one up and throw it; drop one on another. The demo imports the packs whole, so its bundle ships every file.
 
 ## Development
 
@@ -62,7 +62,8 @@ Bun, `just` and `pwsh` (the recipe shell on every OS).
 
 | Recipe | Does |
 |---|---|
-| `just check` | `tsc --noEmit` over every package, then `bun test` (the core's life, framing, spec and settings tests; the packs' spec tests; a test that bundles a page importing one animal and counts the files it ships) |
+| `just demo` | the demo page, built and served |
+| `just check` | `tsc --noEmit` over every package and the demo, then `bun test` (the core's life, framing, spec and settings tests; the packs' spec tests; a test that bundles a page importing one animal and counts the files it ships) |
 | `just web-characters pack`, `just cube-pets pack`, `just block-characters pack` | what each tarball would hold |
 | `just web-characters publish`, `just cube-pets publish`, `just block-characters publish` | `bun publish --access public` for that package, skipped when its version is already on the registry |
 | `just publish-all` | `check`, then every package whose version is new |

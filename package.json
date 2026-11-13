@@ -5,7 +5,8 @@
   "description": "A cat walking along the bottom of your browser: the @n1h/web-characters packages, one repo.",
   "license": "MIT OR 0BSD",
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "demo"
   ],
   "scripts": {
     "typecheck": "tsc --noEmit",

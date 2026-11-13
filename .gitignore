@@ -1,5 +1,6 @@
 node_modules/
 dist/
 build/
+demo/build/
 .*.bun-build
 .DS_Store

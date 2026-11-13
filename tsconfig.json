@@ -23,6 +23,7 @@
   },
   "include": [
     "packages",
+    "demo",
     "scripts"
   ]
 }
