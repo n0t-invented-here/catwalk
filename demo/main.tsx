@@ -9,7 +9,7 @@ import "./main.css";
 import { StrictMode, useRef, useState, type MouseEvent } from "react";
 import { createRoot } from "react-dom/client";
 import { BOTTOM_MIN, SCALE_MIN, type ModelSpec, type Point } from "@n1h/web-characters";
-import { BLOCKY_CHARACTERS } from "@n1h/web-characters-block-characters";
+import { BLOCKY_CHARACTERS, MINI_CHARACTERS } from "@n1h/web-characters-block-characters";
 import { CUBE_PETS, cat } from "@n1h/web-characters-cube-pets";
 import { Character } from "@n1h/web-characters/react";
 
@@ -17,10 +17,12 @@ type Dropped = { id: number; model: ModelSpec; spawn: Point };
 
 const PACKS: { title: string; models: readonly ModelSpec[] }[] = [
   { title: "Cube Pets", models: Object.values(CUBE_PETS) },
+  { title: "Mini Characters", models: MINI_CHARACTERS },
   { title: "Blocky Characters", models: BLOCKY_CHARACTERS },
 ];
 const byUrl = new Map(PACKS.flatMap((p) => p.models).map((m) => [m.url, m]));
-const importName = (m: ModelSpec) => (m.name.startsWith("Blocky ") ? `character${m.name.slice(7)}` : m.name.toLowerCase().replace(" ", ""));
+const camel = (s: string) => s.replace(/-(\w)/g, (_, c: string) => c.toUpperCase());
+const importName = (m: ModelSpec) => (m.name.startsWith("Blocky ") ? `character${m.name.slice(7)}` : m.name.startsWith("Mini ") ? camel(m.name.slice(5)) : m.name.toLowerCase().replace(" ", ""));
 
 const SCALE_MAX_HERE = 4; // the package allows 8; a character that size covers a phone
 

@@ -7,9 +7,9 @@ A pack is an npm package of `ModelSpec`s with their files: specs, glTFs, texture
 | Package | One model | The whole pack (ships every file) | Data only |
 |---|---|---|---|
 | `@n1h/web-characters-cube-pets`, Kenney's Cube Pets: 24 glTF of 130 to 170 KB and one shared texture | `@n1h/web-characters-cube-pets/<name>` exports `<name>`; the names are `PETS` (`cat`, `dog`, `polar`, …) | the package root exports all 24 and `CUBE_PETS` by name | `/spec`: `PETS`, `Pet`, `petLabel`, `BIRDS`, `petModelFile`, `cubePetMoods`, `cubePetSpec` |
-| `@n1h/web-characters-block-characters`, Kenney's Blocky Characters: 4 glTF of about 110 KB with a texture each | `@n1h/web-characters-block-characters/a` … `/d` export `characterA` … `characterD` | the root exports all four and `BLOCKY_CHARACTERS` | `/spec`: `blockyCharacterSpec` |
+| `@n1h/web-characters-block-characters`, Kenney's block-style people: four Blocky Characters (4 glTF of about 110 KB with a texture each) and six Mini Characters (6 glTF of about 250 KB and one shared texture) | `@n1h/web-characters-block-characters/blocky/a` … `/d` export `characterA` … `characterD`; `/mini/female-a` … `/mini/male-c` export `femaleA` … `maleC` | `/blocky` (`BLOCKY_CHARACTERS`), `/mini` (`MINI_CHARACTERS`), the root (`BLOCK_CHARACTERS`, all ten) | `/blocky/spec`: `blockyCharacterSpec`; `/mini/spec`: `miniCharacterSpec` |
 
-The cube pets idle, walk, run and dance, and the three birds also eat (a pecking clip). The Blocky characters idle, walk, sprint, sit and pick things up, nod once when they land, and have no falling clip, so they fall with their carried one. Their files are node-animated, eight units tall as modelled and fitted to 1.3.
+The cube pets idle, walk, run and dance, and the three birds also eat (a pecking clip). The Blocky characters idle, walk, sprint, sit and pick things up, nod once when they land, and have no falling clip, so they fall with their carried one; their files are node-animated, eight units tall as modelled and fitted to 1.3. The Mini characters are skinned, about 0.75 tall as modelled and fitted to 1.3; they idle, walk, sprint, jump, sit now and then, flail while held and fall with a falling clip.
 
 ## Why one module per model
 

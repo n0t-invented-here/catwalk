@@ -2,7 +2,7 @@
   "name": "@n1h/web-characters-block-characters",
   "version": "0.1.0",
   "type": "module",
-  "description": "Kenney's Blocky Characters (CC0), four of them, as @n1h/web-characters models: one module per character, each with its own texture, so a build ships only what a page imports.",
+  "description": "Kenney's block-style people as @n1h/web-characters models: four Blocky Characters and six Mini Characters (CC0), one module per character, so a build ships only what a page imports.",
   "license": "MIT OR 0BSD",
   "repository": {
     "type": "git",
@@ -22,7 +22,10 @@
   "sideEffects": false,
   "exports": {
     ".": "./src/index.ts",
-    "./spec": "./src/spec.ts",
+    "./blocky": "./src/blocky/index.ts",
+    "./blocky/spec": "./src/blocky/spec.ts",
+    "./mini": "./src/mini/index.ts",
+    "./mini/spec": "./src/mini/spec.ts",
     "./*": "./src/*.ts",
     "./assets/*": "./assets/*"
   },

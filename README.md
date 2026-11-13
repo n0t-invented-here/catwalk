@@ -12,7 +12,7 @@ The models come as packs, one npm package each, one module per model, so a build
 |---|---|
 | [`@n1h/web-characters`](packages/web-characters/README.md) | the core: the scene, the life, the ground the characters share, the pointer, `createCharacter`, `<Character>`, the `ModelSpec` type for your own models |
 | [`@n1h/web-characters-cube-pets`](packages/web-characters-cube-pets/README.md) | Kenney's 24 Cube Pets, CC0: `cat`, `dog`, `fox`, … |
-| [`@n1h/web-characters-block-characters`](packages/web-characters-block-characters/README.md) | Kenney's Blocky Characters, CC0: four people |
+| [`@n1h/web-characters-block-characters`](packages/web-characters-block-characters/README.md) | Kenney's block-style people, CC0: four Blocky Characters and six Mini Characters |
 
 ## Install
 
@@ -40,7 +40,7 @@ In React:
 ```tsx
 import { Character } from "@n1h/web-characters/react";
 import { cat } from "@n1h/web-characters-cube-pets/cat";
-import { characterA } from "@n1h/web-characters-block-characters/a";
+import { characterA } from "@n1h/web-characters-block-characters/blocky/a";
 
 <Character model={cat} spawn={{ x: 300, y: 0 }} scale={1.5} />
 <Character model={characterA} spawn={{ x: 600, y: 0 }} />
