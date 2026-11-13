@@ -1,6 +1,10 @@
-# catwalk
+<img src="images/kenney-featuring-yellow-64.png" align="right">
 
-A cat walking along the bottom of your browser.
+# Cat walk 🐈
+
+**A cat walking along the bottom of your browser.**
+
+![Web Characters screenshot](images/WebCharactersScreenshot.jpg)
 
 `@n1h/web-characters` puts animated glTF characters on any web page, and the model packs supply the characters.
 
